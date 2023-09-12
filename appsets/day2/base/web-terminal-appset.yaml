@@ -8,8 +8,9 @@ spec:
   generators:
   - list:
       elements:
-      - cluster: in-cluster-local
-        url: https://kubernetes.default.svc
+      - cluster: local-cluster
+        url: https://api.cluster-jr5vr.jr5vr.sandbox796.opentlc.com:6443
+
   template:
     metadata:
       name: '{{cluster}}-openshift-web-terminal'

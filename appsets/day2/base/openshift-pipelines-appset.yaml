@@ -9,10 +9,6 @@ spec:
   - clusters:
       selector:
         matchLabels:
-          type: dev
-  - clusters:
-      selector:
-        matchLabels:
           environment: prod
   template:
     metadata:

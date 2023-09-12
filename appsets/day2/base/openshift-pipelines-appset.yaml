@@ -6,7 +6,11 @@ metadata:
   namespace: openshift-gitops
 spec:
   generators:
-  - clusters: {}
+  - clusters:
+      selector:
+        matchLabels:
+          environment: prod
+          environment: dev
   template:
     metadata:
       name: '{name}-openshift-pipelines'

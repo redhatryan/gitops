@@ -23,7 +23,7 @@ spec:
       source:
         repoURL: 'https://github.com/redhatryan/gitops'
         path: manifests-cluster/openshift-ingress-operator
-        targetRevision: main
+        targetRevision: HEAD
       syncPolicy:
         automated:
           selfHeal: true

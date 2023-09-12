@@ -82,7 +82,7 @@ link:https://github.com/redhatryan/gitops/tree/main/application-onboarding[Appli
 In fact we can treat a git repo with applicationsets as an argoCD application as well.
     
 ----
-oc create -f https://raw.githubusercontent.com/redhatryan/gitops/gitops-cluster/day2-app.yaml
+oc create -f https://raw.githubusercontent.com/redhatryan/gitops/main/gitops-cluster/day2-app.yaml
 ----
 
 link:https://github.com/redhatryan/gitops/tree/main/common-base[Cluster config] manifests logically grouped

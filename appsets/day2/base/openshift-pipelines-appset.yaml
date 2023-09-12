@@ -2,14 +2,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: openshift-web-terminal-appset
+  name: openshift-pipelines-appset
   namespace: openshift-gitops
 spec:
   generators:
   - cluster: {}
   template:
     metadata:
-      name: '{name}-openshift-web-terminal'
+      name: '{name}-openshift-pipelines'
     spec:
       destination:
         namespace: openshift-operators

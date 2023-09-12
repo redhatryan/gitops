@@ -9,4 +9,4 @@ resources:
 #  - web-terminal-appset.yaml
  # - openshift-devspaces-appset.yaml
  # - openshift-pipelines-appset.yaml
-  - grafana-appset.yaml
+ # - grafana-appset.yaml

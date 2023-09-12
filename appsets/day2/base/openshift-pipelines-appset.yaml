@@ -9,7 +9,7 @@ spec:
   - clusters:
       selector:
         matchLabels:
-          environment: prod
+          environment: dev
   template:
     metadata:
       name: '{{name}}-openshift-pipelines'

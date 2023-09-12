@@ -2,6 +2,7 @@ apiVersion: operators.coreos.com/v1alpha1
 kind: Subscription
 metadata:
   name: grafana
+  namespace: my-grafana
 spec:
   channel: v4
   installPlanApproval: Automatic

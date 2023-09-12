@@ -1,0 +1,29 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: grafana-appset
+  namespace: openshift-gitops
+spec:
+  generators:
+  - list:
+      elements:
+      - cluster: local-cluster
+        url: https://api.cluster-jr5vr.jr5vr.sandbox796.opentlc.com:6443
+
+  template:
+    metadata:
+      name: '{{cluster}}-grafana'
+    spec:
+      destination:
+        namespace: openshift-marketplace
+        server: '{{url}}'
+      project: default
+      source:
+        path: manifests-cluster/grafana-operator/overlays
+        repoURL: https://github.com/redhatryan/gitops
+        targetRevision: HEAD
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true

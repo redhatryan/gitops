@@ -8,3 +8,4 @@ resources:
  # - openshift-registry-appset.yaml
  - web-terminal-appset.yaml
  #- openshift-devspaces-appset.yaml
+ - openshift-pipelines-appset.yaml

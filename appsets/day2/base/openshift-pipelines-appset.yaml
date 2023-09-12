@@ -1,0 +1,25 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: openshift-web-terminal-appset
+  namespace: openshift-gitops
+spec:
+  generators:
+  - cluster: {}
+  template:
+    metadata:
+      name: '{name}-openshift-web-terminal'
+    spec:
+      destination:
+        namespace: openshift-operators
+        server: '{{server}}'
+      project: default
+      source:
+        path: manifests-cluster/openshift-pipelines-operator/overlays/stable
+        repoURL: https://github.com/redhatryan/gitops
+        targetRevision: HEAD
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true

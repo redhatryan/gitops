@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: appsets/day2/overlay 
+    path: appsets/day2/overlay/
     repoURL: https://github.com/redhatryan/gitops
     targetRevision: HEAD
   syncPolicy:

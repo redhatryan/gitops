@@ -19,7 +19,7 @@ spec:
         server: '{{url}}'
       project: default
       source:
-        path: manifests-cluster/openshift-dev-spaces/operator/overlays
+        path: manifests-cluster/openshift-dev-spaces/aggregate
         repoURL: https://github.com/redhatryan/gitops
         targetRevision: HEAD
       syncPolicy:

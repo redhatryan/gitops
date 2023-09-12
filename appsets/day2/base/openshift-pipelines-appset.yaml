@@ -13,7 +13,7 @@ spec:
           environment: dev
   template:
     metadata:
-      name: '{name}-openshift-pipelines'
+      name: '{{name}}-openshift-pipelines'
     spec:
       destination:
         namespace: openshift-operators

@@ -21,7 +21,7 @@ spec:
         server: '{{url}}'
       project: default
       source:
-        repoURL: 'https://github.com/redhatryan/gitops'
+        repoURL: https://github.com/redhatryan/gitops
         path: manifests-cluster/openshift-ingress-operator/
         targetRevision: HEAD
       syncPolicy:

@@ -1,0 +1,9 @@
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  name: my-grafana
+  namespace: my-grafana
+spec:
+  targetNamespaces:
+    - my-grafana
+  upgradeStrategy: Default

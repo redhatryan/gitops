@@ -6,11 +6,11 @@ metadata:
   namespace: openshift-gitops
 spec:
   generators:
-  #- list:
-  #    elements:
-  #    - cluster: in-cluster-local
-  #      url: https://kubernetes.default.svc
-   - clusters: {}
+  - list:
+      elements:
+      - cluster: in-cluster-local
+        url: https://kubernetes.default.svc
+  #- clusters: {}
 
   template:
     metadata:

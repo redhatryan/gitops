@@ -12,7 +12,7 @@ spec:
   source:
     path: appsets/day2/overlay/
     repoURL: https://github.com/redhatryan/gitops
-    targetRevision: main
+    targetRevision: HEAD
   syncPolicy:
     automated:
       prune: true

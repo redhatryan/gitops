@@ -43,7 +43,7 @@ image::docs/gitops-workflow.png[GitOps Workflow]
 . Install GitOps Operator
 
 ----
-oc apply -f https://raw.githubusercontent.com/r3dact3d/gitops/main/gitops-cluster/gitops-operator.yaml -n openshift-operators
+oc apply -f https://raw.githubusercontent.com/redhatryan/gitops/main/gitops-cluster/gitops-operator.yaml -n openshift-operators
 oc project openshift-gitops
 oc adm policy add-cluster-role-to-user cluster-admin -z openshift-gitops-argocd-application-controller
 ----
@@ -52,7 +52,7 @@ oc adm policy add-cluster-role-to-user cluster-admin -z openshift-gitops-argocd-
 . Optional for running GitOps service on Infra nodes
 
 ----
-oc apply -f https://raw.githubusercontent.com/r3dact3d/gitops/main/gitops-cluster/gitopsservice.yaml
+oc apply -f https://raw.githubusercontent.com/redhatryan/gitops/main/gitops-cluster/gitopsservice.yaml
 ----
 
 
@@ -66,26 +66,26 @@ Leverage the link:https://argocd-applicationset.readthedocs.io/en/stable/Generat
 . Create ArgoCD link:https://raw.githubusercontent.com/r3dact3d/gitops/main/gitops-cluster/cluster-onboarding-app.yaml[application] to keep kubernetes resources synced that are required for the Cluster generator 
 
 ----
-oc create -f https://raw.githubusercontent.com/r3dact3d/gitops/main/gitops-cluster/cluster-onboarding-app.yaml
+oc create -f https://raw.githubusercontent.com/redhatryan/gitops/main/gitops-cluster/cluster-onboarding-app.yaml
 ----
 
 [start=2]
-. link:https://github.com/r3dact3d/gitops/tree/main/cluster-onboarding[Onboard] new cluster by adding kubernetes secret to this repo 
+. link:https://github.com/redhatryan/gitops/tree/main/cluster-onboarding[Onboard] new cluster by adding kubernetes secret to this repo 
 
 
 
 
 == Application Onboarding
 
-link:https://github.com/r3dact3d/gitops/tree/main/application-onboarding[Applicationsets] with cluster generator are used to manage the ArgoCD applications. The strategy here is to apply all applicationsets to hub cluster for the applicationset controller to monitor.
+link:https://github.com/redhatryan/gitops/tree/main/application-onboarding[Applicationsets] with cluster generator are used to manage the ArgoCD applications. The strategy here is to apply all applicationsets to hub cluster for the applicationset controller to monitor.
 
 In fact we can treat a git repo with applicationsets as an argoCD application as well.
     
 ----
-oc create -f https://raw.githubusercontent.com/r3dact3d/gitops/main/gitops-cluster/application-onboarding-app.yaml
+oc create -f https://raw.githubusercontent.com/redhatryan/gitops/main/gitops-cluster/application-onboarding-app.yaml
 ----
 
-link:https://github.com/r3dact3d/gitops/tree/main/common-base[Cluster config] manifests logically grouped
+link:https://github.com/redhatryan/gitops/tree/main/common-base[Cluster config] manifests logically grouped
 
 image::docs/cluster-generator-diagram.png[Cluster Generator Diagram]
 
